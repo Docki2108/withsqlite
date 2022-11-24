@@ -1,5 +1,5 @@
 import 'package:withsqlite/domain/entity/role_entity.dart';
-import '../../domain/entity/card_entity.dart';
+import '../../domain/entity/cart_entity.dart';
 import '../../domain/entity/product_entity.dart';
 import '../../domain/entity/provideraddress_entity.dart';
 import '../../domain/entity/role_entity.dart';
@@ -25,10 +25,11 @@ class ProviderAddress extends ProviderAddressEntity {
 
   factory ProviderAddress.toFromMap(Map<String, dynamic> json) {
     return ProviderAddress(
-        name: json['name'],
-        country: json['country'],
-        city: json['city'],
-        street: json['street'],
-        house: json['house']);
+      name: json['name'],
+      country: json['country'],
+      city: json['city'],
+      street: json['street'],
+      house: json['house'],
+    );
   }
 }

@@ -1,5 +1,5 @@
 import 'package:withsqlite/domain/entity/role_entity.dart';
-import '../../domain/entity/card_entity.dart';
+import '../../domain/entity/cart_entity.dart';
 import '../../domain/entity/product_entity.dart';
 import '../../domain/entity/producttype_entity.dart';
 import '../../domain/entity/role_entity.dart';

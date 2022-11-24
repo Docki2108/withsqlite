@@ -82,30 +82,31 @@ abstract class DataBaseRequest {
         "name" TEXT NOT NULL,
         PRIMARY KEY("id" AUTOINCREMENT) )''';
 
-  static const String _createTableShop = '''CREATE TABLE "$tableShop" (
-        "id"	INTEGER, 
+  static const String _createTableShop = '''
+        CREATE TABLE "$tableShop" (
+        "id"	INTEGER,
         "name"	TEXT NOT NULL UNIQUE,
         "work_schedule" TEXT NOT NULL,
         "id_shopaddress"	INTEGER,
-        FOREIGN KEY("id_shopaddress") REFERENCES "shopaddress"("id") ON DELETE CASCADE,
         "id_product"	INTEGER,
+  		  FOREIGN KEY("id_shopaddress") REFERENCES "shopaddress"("id") ON DELETE CASCADE,	
         FOREIGN KEY("id_product") REFERENCES "product"("id") ON DELETE CASCADE,
         PRIMARY KEY("id" AUTOINCREMENT) )''';
 
-  static const String _createTableProduct = '''CREATE TABLE "$tableProduct" (
+  static const String _createTableProduct = '''
+        CREATE TABLE "$tableProduct" (
         "id"	INTEGER, 
         "name"	TEXT NOT NULL,
         "id_user"	INTEGER,
-        FOREIGN KEY("id_user") REFERENCES "user"("id") ON DELETE CASCADE,
         "id_provider"	INTEGER,
-        FOREIGN KEY("id_provider") REFERENCES "provider"("id") ON DELETE CASCADE,
         "id_producttype"	INTEGER,
-        FOREIGN KEY("id_producttype") REFERENCES "producttype"("id") ON DELETE CASCADE,
-        FOREIGN KEY("id_user") REFERENCES "user"("id") ON DELETE CASCADE,
-        FOREIGN KEY("id_provider") REFERENCES "provider"("id") ON DELETE CASCADE,
+  		  FOREIGN KEY("id_user") REFERENCES "user"("id") ON DELETE CASCADE,
+  		  FOREIGN KEY("id_provider") REFERENCES "provider"("id") ON DELETE CASCADE,
+  		  FOREIGN KEY("id_producttype") REFERENCES "producttype"("id") ON DELETE CASCADE,
         PRIMARY KEY("id" AUTOINCREMENT) )''';
 
-  static const String _createTableProvider = '''CREATE TABLE "$tableProvider" (
+  static const String _createTableProvider = '''
+        CREATE TABLE "$tableProvider" (
         "id"	INTEGER, 
         "name"	TEXT NOT NULL,
         "id_provideraddress"	INTEGER,

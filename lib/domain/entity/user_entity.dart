@@ -14,3 +14,30 @@ class UserEntity {
     required this.idRole,
   });
 }
+
+enum UserEnum {
+  user1(
+    id: 1,
+    login: 'Пользователь 1',
+    password: '123',
+    idRole: '1',
+  ),
+  user2(
+    id: 2,
+    login: 'Пользователь 2',
+    password: '456',
+    idRole: '2',
+  );
+
+  const UserEnum({
+    required this.id,
+    required this.login,
+    required this.password,
+    required this.idRole,
+  });
+
+  final int id;
+  final String login;
+  final String password;
+  final String idRole;
+}

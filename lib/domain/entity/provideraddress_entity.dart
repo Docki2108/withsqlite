@@ -17,19 +17,21 @@ class ProviderAddressEntity {
 
 enum ProviderAddressEnum {
   first(
-      id: 1,
-      name: 'Хи-хи-хинский сказки',
-      country: 'Россия',
-      city: 'Москва',
-      street: 'Нахимовский проспект',
-      house: 111),
+    id: 1,
+    name: 'Хи-хи-хинский сказки',
+    country: 'Россия',
+    city: 'Москва',
+    street: 'Нахимовский проспект',
+    house: 111,
+  ),
   second(
-      id: 2,
-      name: 'Ха-ха-хинские басни',
-      country: 'Поле чудес',
-      city: 'Тарабарск',
-      street: 'им. Джузеппе',
-      house: 222);
+    id: 2,
+    name: 'Ха-ха-хинские басни',
+    country: 'Поле чудес',
+    city: 'Тарабарск',
+    street: 'им. Джузеппе',
+    house: 222,
+  );
 
   const ProviderAddressEnum({
     required this.id,
